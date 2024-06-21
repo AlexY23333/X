@@ -2,20 +2,20 @@
 
 #include "Command.h"
 
-class CmdEndDraw : public Command
+class CmdSetCullMode : public Command
 {
 public:
 	const char* GetName() override
 	{
-		return "EndDraw";
+		return "SetCullMode";
 	}
 
 	const char* GetDescription() override
 	{
 		return
-			"EndDraw\n"
+			"SetCullMode(<cullMode>)\n"
 			"\n"
-			"- sends vertices to rasterizer to render";
+			"- Sets the triangle cull mode (none, back, front).";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;

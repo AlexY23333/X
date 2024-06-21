@@ -2,20 +2,20 @@
 
 #include "Command.h"
 
-class CmdEndDraw : public Command
+class CmdEnableDepth : public Command
 {
 public:
 	const char* GetName() override
 	{
-		return "EndDraw";
+		return "EnableDepth";
 	}
 
 	const char* GetDescription() override
 	{
 		return
-			"EndDraw\n"
+			"EnableDepth(<bool>)\n"
 			"\n"
-			"- sends vertices to rasterizer to render";
+			"- Enable/Disable depth buffer.";
 	}
 
 	bool Execute(const std::vector<std::string>& params) override;
